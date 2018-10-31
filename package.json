@@ -1,0 +1,21 @@
+{
+  "name": "deezer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set PORT=80 && set APP_ID=308884 && set SECRET=5969327b0d3f0383644f53f8808b086d && set REDIRECT_URL=http://localhost/callback && node ./dist/index.js",
+    "watch-ts": "tsc -w"
+  },
+  "author": "Allan Douglas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "inversify": "^5.0.1",
+    "node-deezer": "^0.3.3",
+    "reflect-metadata": "^0.1.12"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0"
+  }
+}
