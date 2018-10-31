@@ -1,11 +1,17 @@
 # api-deezer-node-example
 simple integration between node and deezer api
 
+# run
+```
+tsc -w (yes you need typescript) 
+yarn start-dev (and yarn too, if you want)
+```
+
 # routes
-
-/ <br>
-/login <br>
-/artists <br>
-/artist/{id} <br>
-/artist/{id}/songs <br> 
-
+```
+/ 
+/login 
+/artists 
+/artist/{id} 
+/artist/{id}/songs 
+```
