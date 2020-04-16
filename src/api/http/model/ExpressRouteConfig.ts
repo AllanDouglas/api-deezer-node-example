@@ -6,7 +6,7 @@ import { ArtistPayload } from '../songs/data/Artist';
 const DZ = require('node-deezer')
 
 export class ExpressRouteConfig implements RouteConfig {
-    
+
     private controller: ISongService;
 
     init(app: any, controller: ISongService): void {
@@ -31,7 +31,7 @@ export class ExpressRouteConfig implements RouteConfig {
             if (req.query.code) {
 
                 try {
-                    let token = await this.controller.createSession(req.query.code);
+                    let token = await this.controller.createSession(req.query.code as string);
 
                     res.send({
                         accessToken: token
@@ -83,7 +83,7 @@ export class ExpressRouteConfig implements RouteConfig {
             try {
                 let token = this.getToken(req);
 
-                let artist = await this.controller.songs({ id: req.params.id } as ArtistPayload, token);
+                let artist = await this.controller.songs((req.params as any) as ArtistPayload, token);
 
                 res.send({
                     data: artist
